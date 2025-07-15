@@ -166,7 +166,8 @@
 
     .conteudo-evento {
       padding: 1rem 1.5rem;
-      
+      justify-content: space-between;
+      height: 100%;
       display: flex;
       flex-direction: column;
 
@@ -479,6 +480,10 @@
     .conteudo-evento {
       padding: 1.5rem 2rem;
       display: flex;
+
+      height: 100%;
+      justify-content: space-between;
+
       flex-direction: column;
 
       h3 {
