@@ -1,0 +1,564 @@
+
+
+
+.hero {
+  position: relative;
+  color: rgb(0, 0, 0);
+  text-align: center;
+  padding: 5rem 1rem;
+
+ 
+
+  h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+
+  p {
+    font-size: 1.2rem;
+  }
+}
+.sobre {
+  display: flex;
+  flex-direction: column-reverse;
+  
+  align-items: center;
+  padding: 4rem 0;
+
+  .texto {
+    flex: 1;
+
+    h2 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      color: $primary-color;
+      border-bottom: 3px solid $accent-color;
+      padding-bottom: 0.5rem;
+    }
+
+    h3 {
+      font-size: 1.5rem;
+      margin-top: 1.5rem;
+      margin-bottom: 0.5rem;
+      color: darken($primary-color, 10%);
+    }
+
+    p {
+      font-size: 1.1rem;
+      margin-bottom: 1rem;
+      text-align: justify;
+      line-height: 1.5;
+    }
+
+    ul {
+      
+      padding-left: 1.5rem;
+      margin-bottom: 1rem;
+
+      li {
+        margin-bottom: 0.5rem;
+        font-size: 1.1rem;
+      }
+    }
+  }
+
+  .imagem {
+    flex: 1;
+    img {
+      border-radius: 12px;
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+      max-width: 100%;
+      height: auto;
+    }
+  }
+
+  @media (min-width: 768px) {
+    flex-direction: row;
+    text-align: left;
+  }
+}
+
+.acervo-destaque {
+  padding: 4rem 0;
+
+  h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: $primary-color;
+  }
+
+  .livros {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+
+  .livro {
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    
+
+    img {
+      width: 100%;
+      height: auto;
+      max-height: 250px;
+      border-radius: 8px;
+      margin-bottom: 1rem;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h3 {
+      margin-bottom: 0.5rem;
+      color: $primary-color;
+    }
+
+    p {
+      font-size: 0.95rem;
+      margin-bottom: 0.75rem;
+      color: $text-color;
+    }
+
+    .btn {
+      margin-top: auto;
+      padding: 0.5rem 1rem;
+      font-size: 1rem;
+    }
+
+    &:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    }
+  }
+}
+.eventos-destaque {
+  padding: 4rem 0;
+
+  h2 {
+    text-align: center;
+    margin-bottom: 2.5rem;
+    color: $primary-color;
+  }
+
+  .eventos {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(2, 1fr)
+  }
+
+  .evento {
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+    display: flex;
+    flex-direction: column;
+
+    img {
+      width: 100%;
+      height: 180px;
+      
+    }
+
+    .conteudo-evento {
+      padding: 1rem 1.5rem;
+      
+      display: flex;
+      flex-direction: column;
+
+      h3 {
+        color: $primary-color;
+        margin-bottom: 0.5rem;
+      }
+
+      .data {
+        font-weight: 600;
+        color: darken($primary-color, 20%);
+        margin-bottom: 1rem;
+        font-size: 0.9rem;
+      }
+
+      p {
+        flex-grow: 1;
+        font-size: 1rem;
+        color: $text-color;
+        margin-bottom: 1.25rem;
+      }
+
+      .btn {
+        align-self: flex-start;
+        padding: 0.5rem 1.2rem;
+        font-weight: 600;
+      }
+    }
+
+    &:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.18);
+    }
+  }
+}
+.cta-tour {
+  background: linear-gradient(135deg, #1e3a8a, #2563eb);
+  color: white;
+  text-align: center;
+  padding: 6rem 1rem;
+  border-radius: 12px;
+  margin: 4rem 0;
+
+  h2 {
+    font-size: 2.8rem;
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.4);
+  }
+
+  .btn {
+    background-color: #f97316;
+    padding: 1rem 2.5rem;
+    font-size: 1.3rem;
+    border-radius: 50px;
+    font-weight: 700;
+    box-shadow: 0 8px 20px rgba(249, 115, 22, 0.5);
+
+    &:hover {
+      background-color: darken(#f97316, 10%);
+      box-shadow: 0 12px 30px rgba(249, 115, 22, 0.8);
+    }
+  }
+
+
+}
+.acervo {
+  padding: 3rem 0;
+
+  h2 {
+    text-align: center;
+    margin-bottom: 1rem;
+    color: $primary-color;
+    font-size: 2.8rem;
+  }
+
+  .descricao-acervo {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto 3rem auto;
+    font-size: 1.2rem;
+    color: darken($text-color, 15%);
+  }
+
+  .categoria {
+    margin-bottom: 4rem;
+
+    h3 {
+      font-size: 2rem;
+      color: darken($primary-color, 15%);
+      border-bottom: 3px solid $accent-color;
+      padding-bottom: 0.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .desc-categoria {
+      font-style: italic;
+      margin-bottom: 2rem;
+      color: darken($text-color, 30%);
+      max-width: 700px;
+    }
+
+    .livros-grid {
+      display: grid;
+      grid-template-columns: repeat(3,1fr);
+      gap: 2.5rem;
+    }
+
+    .livro {
+      background-color: white;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+      padding: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      
+
+      img {
+        width: 100%;
+        height: 300px;
+        border-radius: 10px;
+        margin-bottom: 1rem;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.12);
+      }
+
+      h4 {
+        margin-bottom: 0.3rem;
+        color: $primary-color;
+        font-size: 1.4rem;
+      }
+
+      .autor {
+        font-weight: 600;
+        margin-bottom: 1rem;
+        color: darken($primary-color, 30%);
+        font-size: 1rem;
+      }
+
+      .descricao-livro {
+        font-size: 1rem;
+        margin-bottom: 1.3rem;
+        color: $text-color;
+        line-height: 1.4;
+      }
+
+      .btn {
+        background-color: $accent-color;
+        color: white;
+        padding: 0.6rem 1.3rem;
+        border-radius: 30px;
+        font-weight: 600;
+        text-decoration: none;
+        box-shadow: 0 6px 18px rgba($accent-color, 0.6);
+        
+
+        &:hover {
+          background-color: darken($accent-color, 10%);
+          box-shadow: 0 8px 25px rgba($accent-color, 0.8);
+        }
+      }
+
+      &:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 12px 30px rgba(0, 0, 0, 0.18);
+      }
+    }
+  }
+}
+
+
+
+.reservas {
+  padding: 4rem 0;
+
+  h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: $primary-color;
+  }
+
+.form-reserva {
+  max-width: 480px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+
+  fieldset {
+    border: 1px solid lighten($text-color, 70%);
+    padding: 1.5rem 2rem;
+    border-radius: 12px;
+
+    legend {
+      font-weight: 700;
+      font-size: 1.3rem;
+      padding: 0 0.5rem;
+      margin-bottom: 1rem;
+    }
+
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  label {
+    font-weight: 600;
+    color: $text-color;
+    font-size: 1rem;
+  }
+
+  input,
+  select {
+    padding: 0.8rem 1rem;
+    font-size: 1rem;
+    border: 2px solid lighten($text-color, 50%);
+    border-radius: 8px;
+    
+    
+
+    &:focus {
+      border-color: $primary-color;
+      
+      box-shadow: 0 0 5px rgba($primary-color, 0.5);
+    }
+
+    &:invalid {
+      border-color: #e53e3e; 
+      box-shadow: 0 0 6px rgba(229, 62, 62, 0.6);
+    }
+
+    &:valid {
+      border-color: #38a169; // verde válido
+      box-shadow: 0 0 6px rgba(56, 161, 105, 0.6);
+    }
+  }
+
+  button.btn {
+    background-color: $accent-color;
+    color: white;
+    font-weight: 700;
+    font-size: 1.1rem;
+    padding: 0.9rem 0;
+    border: none;
+    border-radius: 50px;
+    
+    box-shadow: 0 6px 20px rgba($accent-color, 0.6);
+   
+
+    &:hover:enabled {
+      background-color: darken($accent-color, 10%);
+      box-shadow: 0 8px 30px rgba($accent-color, 0.8);
+    }
+
+    &:enabled {
+      cursor: pointer;
+    }
+  }
+  }
+}
+
+
+
+.eventos {
+  padding: 4rem 0;
+
+  h2 {
+    text-align: center;
+    color: $primary-color;
+    font-size: 2.8rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .intro-eventos {
+    text-align: center;
+    color: darken($text-color, 20%);
+    font-size: 1.2rem;
+    margin-bottom: 3rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .lista-eventos {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 2.5rem;
+  }
+
+  .evento {
+    background-color: white;
+    border-radius: 14px;
+    box-shadow: 0 6px 22px rgba(0, 0, 0, 0.12);
+    display: flex;
+    flex-direction: column;
+    
+
+    &:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.18);
+    }
+
+    img {
+      width: 100%;
+      height: 200px;
+      border-bottom: 4px solid $accent-color;
+    }
+
+    .conteudo-evento {
+      padding: 1.5rem 2rem;
+      display: flex;
+      flex-direction: column;
+
+      h3 {
+        color: $primary-color;
+        margin-bottom: 0.5rem;
+        font-size: 1.6rem;
+      }
+
+      .data {
+        font-weight: 600;
+        color: darken($primary-color, 25%);
+        font-size: 0.95rem;
+        margin-bottom: 1rem;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+      }
+
+      p {
+        
+        color: $text-color;
+        font-size: 1rem;
+        line-height: 1.5;
+        margin-bottom: 1.2rem;
+      }
+
+      .btn {
+        align-self: flex-start;
+        background-color: $accent-color;
+        color: white;
+        padding: 0.6rem 1.6rem;
+        border-radius: 30px;
+        font-weight: 700;
+        box-shadow: 0 6px 18px rgba($accent-color, 0.4);
+        
+
+        &:hover {
+          background-color: darken($accent-color, 10%);
+          box-shadow: 0 8px 24px rgba($accent-color, 0.7);
+        }
+      }
+    }
+  }
+}
+
+
+.tour {
+  padding: 4rem 0;
+
+  h2 {
+    text-align: center;
+    color: $primary-color;
+    font-size: 2.8rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .intro-tour {
+    text-align: center;
+    font-size: 1.2rem;
+    color: darken($text-color, 20%);
+    margin-bottom: 3rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .iframe-container {
+    position: relative;
+    padding-bottom: 56.25%; 
+    height: 0;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+
+    iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+  }
+}
